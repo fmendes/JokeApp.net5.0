@@ -1,0 +1,21 @@
+﻿1- Create Web Application MVC with Individual User accounts enabled (it will auto create SQLite db, migration and wire everything up)
+
+2- Edit Views/Home/Index.cshtml and Privacy.cshtml
+
+3- Create your data classes under Data/
+
+4- Add new MVC Controller scaffolding for the new data under Views/ using your new Data class and give it a controller name
+
+5- If the new controller JokesController.cs was created under Views/ then move it to Controllers/
+
+6- On the project folder, run "dotnet ef migrations add CreateJokes" and "dotnet ef database update" to update the db with the new data
+
+7- Edit Views/Shared/_Layout.cshtml to include new navigation items Jokes/Index and Jokes/SearchJokeForm
+
+8- Rebuild to include the new Joke model
+
+9- Create search form under Views/Jokes/ by copying Edit.cshtml and modifying it to accept one field SearchPhrase and redirect to ShowSearchResults
+
+10- Add new methods ShowSearchForm and ShowSearchResults to the controller
+
+11- Add [Authorize] to each of the methods that change data and add "using Microsoft.AspNetCore.Authorization;" at the top
